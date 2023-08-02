@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="logo">My Website</a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about" >About</a>
+        <a href="#skills" >Skills</a>
+        <a href="#projects" >Projects</a>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's me</h3>
+        <h1>Thanh Phong</h1>
+        <h3>And I'm a <span>Backend Developer</span></h3>
+        <p>
+          Đôi khi là muộn màng
+          <br />
+          Đôi khi là vội vàng
+          <br />
+          Đôi khi là bỏ lỡ ...
+        </p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/profile.php?id=100031925508672"><i class="bx bxl-facebook"></i></a>
+          <a href="#" id="sendEmailLink"><i class="bx bxl-gmail"></i></a>
+          <script>
+            document.getElementById('sendEmailLink').addEventListener('click', function(event) {
+              event.preventDefault();
+              sendEmailToGmail();
+            });
+        
+            function sendEmailToGmail() {
+              // Địa chỉ Gmail cần gửi email đến
+              var emailRecipient = 'ptp150202@gmail.com';
+        
+              // Chủ đề email
+              var emailSubject = 'Portfolio';
+        
+              // Nội dung email
+              var emailBody = 'Hello !';
+        
+              // Tạo đường dẫn link email với các thông tin cần thiết
+              var mailtoLink = 'mailto:' + emailRecipient + '?subject=' + encodeURIComponent(emailSubject) + '&body=' + encodeURIComponent(emailBody);
+        
+              // Mở trình duyệt email mặc định để gửi email
+              window.location.href = mailtoLink;
+            }
+          </script>
+          <a href="https://instagram.com/t.ph15?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="https://github.com/pthanhphong1502"><i class="bx bxl-github"></i></a>
+        </div>
+        <a class="btn" href="https://t.me/thanhphong1502">My Telegram</a>
+      </div>
+
+      <div class="home-img">
+        <img src="./images/logo.png" alt="LogoMy" />
+      </div>
+    </section>
+    <!-- Home -->
+
+    <!-- About me -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="./images/logo.png" alt="LogoMy" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span> Me</span></h2>
+        <h3>Backend Developer</h3>
+        <p>
+          Chào mừng bạn đã đến với Website,
+          tôi là một Backend Developer. Tôi rất sẵn lòng chia sẻ kiến thức và 
+          học hỏi từ cộng đồng lập trình, tôi luôn tìm cách cải thiện kỹ 
+          năng và đóng góp tích cực vào sự phát triển của dự án. Đối với tôi, 
+          việc tạo ra các sản phẩm ổn định, linh hoạt và dễ bảo trì là mục tiêu hàng đầu.
+          Rất hân hạnh được hợp tác và gặp gỡ các đồng nghiệp có cùng đam mê để cùng nhau 
+          xây dựng những giải pháp tuyệt vời.
+        </p>
+      </div>
+    </section>
+    <!-- About me -->
+
+    <!-- Skillls -->
+    <section class="skills" id="skills">
+      <div class="part1">
+        <div class="programming">
+          <h3 style="font-size: 3.2rem; color: #00EEFF; position: absolute; top: 8%; left: 7%;">Programming Language</h3>
+          <img src="./images/icons8-html-240.png" alt="HTML" title="HTML">
+          <img src="./images/icons8-css-240.png" alt="CSS" title="CSS">
+          <img src="./images/icons8-c-sharp-logo-2-240.png" alt="CSharp" title="C#">
+          <img src="./images/icons8-dart-240.png" alt="Dart" title="Dart">
+        </div>
+      </div>
+      <div class="part2">
+        <div class="part2-left">
+          <h3 style="font-size: 3.2rem; color: #00EEFF;">Framework</h3>
+          <img src="./images/128_asp_net.png" alt="ASP" title="ASP.NET">
+          <img src="./images/icons8-flutter-144.png" alt="Flutter" title="Flutter">
+        </div>
+        <div class="part2-right">
+          <h3 style="font-size: 3.2rem; color: #00EEFF;">SCM</h3>
+          <img src="./images/icons8-git-144.png" alt="Git" title="Git">
+          <img src="./images/icons8-github-144.png" alt="Github" title="Github">
+        </div>
+      </div>
+      <div class="part3">
+        <h3 style="font-size: 3.2rem; color: #00EEFF;">Database</h3>
+        <div class="image-container">
+          <img src="./images/icons8-microsoft-sql-server-144.png" alt="SQLServer" title="SQLServer">
+          <img src="./images/icons8-postgresql-144.png" alt="PostgreSQL" title="PostgreSQL">
+          <img src="./images/icons8-firebase-144.png" alt="Firebase" title="Firebase">
+        </div>
+    </section>
+    <!-- Skills -->
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>Description of Project 1</p>
+          <a href="#">Read More</a>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>Description of Project 2</p>
+          <a href="#">Read More</a>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 3">
+          <h3>Project 3</h3>
+          <p>Description of Project 3</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    
+      <div class="card-container">
+        <!-- Card 4 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 4">
+          <h3>Project 4</h3>
+          <p>Description of Project 4</p>
+          <a href="#">Read More</a>
+        </div>
+    
+        <!-- Card 5 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 5">
+          <h3>Project 5</h3>
+          <p>Description of Project 5</p>
+          <a href="#">Read More</a>
+        </div>
+    
+        <!-- Card 6 -->
+        <div class="card">
+          <img src="./images/128_asp_net.png" alt="Project 6">
+          <h3>Project 6</h3>
+          <p>Description of Project 6</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
